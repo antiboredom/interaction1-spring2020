@@ -1,0 +1,863 @@
+/* BASE
+--------------------------------------------------------- */
+
+/* fonts */
+
+@font-face {
+    font-family: 'Dia';
+    src:url("../fonts/DiaRegular.woff");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  font-family: 'Dia', Helvetica, Arial, Sans-Serif;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+body.Sunday, body.Sunday .item {
+  background: #bf5700;
+  color: #fff;
+}
+
+body.Sunday a {
+  color: #fff;
+  border-bottom: 1px dotted #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #f8971f;
+  color: #000;
+  border-bottom: 1px dotted #000;
+
+}
+
+a:hover {
+  color: #f8971f;
+  border: none;
+}
+
+body.Sunday a:hover {
+  color: #f8971f;
+  border-bottom: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+ol {
+  padding: 0;
+  padding-left: 1.25em;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+  margin-bottom: 2em;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+.centered {
+  text-align: center;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.clearer {
+  float: none !important;
+  clear: both;
+}
+
+
+/* OVERALL CONTAINERS AND COLUMNS
+--------------------------------------------------------- */
+
+
+.container {
+  margin: 28px;
+  overflow: auto;
+}
+
+.container a,
+footer a {
+  /*text-decoration: underline;*/
+}
+
+.container a:hover,
+footer a:hover {
+    text-decoration: none;
+}
+
+.columns {
+  margin-top: 2em;
+}
+
+.column {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.columns-1 .column {
+  width: 100%;
+}
+
+.columns-2 .column {
+  width: 50%;
+}
+
+.columns-3 .column {
+  width: 33.33%;
+}
+
+.columns-4 .column {
+  width: 25%;
+}
+
+.columns-5 .column {
+  width: 20%;
+}
+
+
+/* TYPOGRAPHY
+--------------------------------------------------------- */
+
+.regular,
+.caption, figcaption,
+.text .notes,
+.text blockquote,
+.document,
+#footnotes,
+.sign-off {
+
+}
+
+.large,
+.text {
+  font-size: 26px;
+  line-height: 1.4;
+}
+
+code,
+nav,
+.library,
+.blog-row,
+.blog-date,
+.metadata,
+ul.calendar .title,
+footer .source,
+#meta-bar,
+.project-code,
+.projects-start-end,
+.sections-index {
+  -webkit-font-smoothing: antialiased;
+}
+
+a.button {
+  background: white;
+  border-bottom: 1px solid white;
+  /*padding: 16px 20px;*/
+  display: inline-block;
+  margin: 0.5em 0;
+}
+
+a.button:hover {
+  background: white;
+  border-bottom: 1px solid white;
+}
+
+.document ul li {
+  list-style-type: disc;
+  list-style-position: inside;
+  text-indent: -1.4em;
+  padding-left: 1em;
+}
+
+
+
+/* NAVIGATION
+--------------------------------------------------------- */
+
+nav {
+  text-align: left;
+  height: 80px;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  position: relative;
+  padding-left: 25px;
+}
+
+nav li {
+  display: inline-block;
+  list-style-type: none;
+  list-style-position: outside;
+  margin-right: 12px;
+  padding: 36px 3px;
+  text-indent: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+nav li:hover a{
+  color: #f8971f;
+}
+
+nav li.current a,
+nav li.current:hover a{
+  color: #f8971f;
+  cursor: pointer;
+  border: none;
+}
+
+
+.Sunday nav li.current a,
+.Sunday nav li.current:hover a{
+  color: #f8971f;
+  cursor: pointer;
+  border: none;
+}
+
+nav .home-link {
+  /*display: block; */
+}
+
+nav .info-link {
+  position: absolute;
+  right: 16px;
+  top: 20px;
+  height: 12px;
+  width: 12px;
+  background: url('../images/info.svg') no-repeat;
+  background-size: 12px 12px;
+}
+
+
+
+/* HOME
+--------------------------------------------------------- */
+
+.home .container {
+}
+
+#greeting.document {
+  font-size: 26px;
+  line-height: 1.2em;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+}
+
+#greeting p{
+  width: 320px;
+  float: left;
+  margin-right: 50px;
+}
+
+
+
+/* TEXTS DIRECTORY
+--------------------------------------------------------- */
+
+.library-row,
+.blog-row {
+  width: 100%;
+  border-top: 1px solid #000;
+  padding: 16px 12px 16px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+a.library-item,
+a.blog-post {
+  border-bottom: none;
+  color: #000;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  text-indent: 16px;
+  padding: 16px 0 16px;
+  margin: -16px 0 -16px;
+  transition: .1s background ease-out;
+  -webkit-transition: .1s background ease-out;
+  -moz-transition: .1s background ease-out;
+  -o-transition: .1s background ease-out;
+}
+
+.library-row .class-item h2 {
+  text-transform: uppercase;
+}
+
+.library-item h2,
+.blog-post h2 {
+  display: inline;
+}
+
+.library-item .year,
+.blog-post .date {
+  position: absolute;
+  right: 32px;
+  top: 16px;
+}
+
+.library-row:first-child,
+.blog-row:first-child {
+  border-top: 0;
+}
+
+.library-row:last-child,
+.blog-row:last-child {
+  border-bottom: 1px solid #000;
+}
+
+.metadata p {
+  margin: 0;
+}
+
+.metadata .space {
+  width: 100%;
+  height: 1em;
+}
+
+.metadata {
+  margin-bottom: 56px;
+}
+
+sup.footnote {
+}
+
+#footnotes {
+  margin-top: 56px;
+  max-width: 640px;
+}
+
+#footnotes li {
+  margin-bottom: 1em;
+}
+
+.footnotereverse a,
+.footnotereverse a:hover {
+  background: none;
+}
+
+/* INDIVIDUAL TEXT
+--------------------------------------------------------- */
+
+a.top-link {
+  display: block;
+  position: relative;
+  height: 52px;
+  border-bottom: 1px solid black;
+  line-height: 52px;
+  padding-left: 28px;
+  transition: .1s background ease-out;
+  -webkit-transition: .1s background ease-out;
+  -moz-transition: .1s background ease-out;
+  -o-transition: .1s background ease-out;
+}
+
+figure {
+  margin-bottom: 1em;
+}
+
+figure.right {
+  float: right;
+  margin-left: 1em;
+}
+
+figure.left {
+  float: left;
+  margin-right: 1em;
+}
+
+figure.small {
+  max-width: 250px;
+}
+
+figure.medium {
+  max-width: 400px;
+}
+
+figure.large {
+  max-width: 700px;
+}
+
+.blog-post h1 {
+  display: inline-block;
+  margin-top: 0;
+}
+
+.text h1,
+.text h2,
+.text h3,
+.text h4,
+.text h5,
+.text h6 {
+  /*font-weight: bold;*/
+}
+
+.text .notes,
+.text blockquote {
+  max-width: 640px;
+}
+
+.metadata h1 {
+  margin: 0;
+}
+
+.metadata .selected-image {
+  max-width: 175px;
+  margin-bottom: 1em;
+}
+
+
+/* INDIVIDUAL DOCUMENT
+--------------------------------------------------------- */
+
+.document {
+  max-width: 740px;
+  margin: 2em 0px;
+}
+
+.document h2,
+.document h3,
+.document h4,
+.document h5,
+.document h6 {
+  /*font-weight: bold;*/
+  margin-top: 2.5em;
+  text-transform: uppercase;
+}
+
+.document ul li {
+  list-style-type: circle;
+  list-style: inside;
+}
+
+.document .metadata {
+  margin-top: 56px;
+}
+
+#meta-bar {
+  display: none;
+}
+
+#meta-bar .inside {
+  padding: 17px 25px;
+  width: calc(100% - 50px);
+  text-align: left;
+}
+
+#meta-bar hr {
+  margin: 112px 0 0;
+}
+
+#meta-bar.bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#meta-bar .back-to-top {
+  display: none;
+  padding: 17px;
+  position: absolute;
+  right: 10px;
+}
+
+.document h2:first-child {
+  margin-top: 0;
+}
+
+.document hr {
+  border: 0;
+  border-top: 1px solid #000;
+  margin: 84px 0;
+}
+
+/* PROJECTS
+--------------------------------------------------------- */
+
+/*.document ul.projects {
+  margin: 2em 0;
+}*/
+
+.document ul.projects li {
+  list-style-type: none;
+}
+
+.document-side {
+  position: absolute;
+}
+
+
+/* CALENDAR
+--------------------------------------------------------- */
+
+ul.calendar {
+  border-top: 1px solid #f8971f;
+  margin-top: 52px;
+}
+
+ul.calendar li.calendar-row {
+  border-bottom: 1px solid #f8971f;
+}
+
+.Sunday ul.calendar {
+  border-top: 1px solid #f8971f;
+  margin-top: 52px;
+}
+
+.Sunday ul.calendar li.calendar-row {
+  border-bottom: 1px solid #f8971f;
+}
+
+.document ul.calendar li.calendar-row {
+  list-style-type: none;
+}
+
+ul.calendar .title {
+  text-indent: 12px;
+  height: 52px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: .1s background ease-out;
+  -webkit-transition: .1s background ease-out;
+  -moz-transition: .1s background ease-out;
+  -o-transition: .1s background ease-out;
+}
+
+ul.calendar .body {
+  border-top: 1px dashed #f8971f;
+  display: none;
+  margin-bottom: 52px;
+  padding-top: 19px;
+  padding-left: 36px;
+}
+
+.projects-start-end {
+  position: absolute;
+  width: 100px;
+  right: -110px;
+  top: 12px;
+  text-indent: 0px;
+}
+
+.current-week {
+  position: absolute;
+  width: 80px;
+  height: 54px;
+  left: -75px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.week {
+  color: black;
+}
+
+figure.reading {
+  margin-bottom: -0.75em;
+}
+
+.reading img {
+  max-width: 175px;
+}
+
+ul.calendar figure {
+  margin: 1em 0;
+}
+
+.students ul {
+  list-style: none;
+  width: 50%;
+}
+
+.students ul li.student {
+  display: inline-block;
+}
+
+.students ul li.student a {
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+  border: 1px solid #f8971f;
+  display: block;
+  padding: 5%;
+  margin: 0 1.25rem .5rem 0;
+  width: 7rem;
+}
+
+.students ul li.student a:hover {
+  color: #f8971f;
+  background: white;
+  border: 1px solid #f8971f;
+}
+
+
+/* FREEFORM
+--------------------------------------------------------- */
+
+footer {
+  margin: 28px;
+}
+
+footer .source {
+  display: none;
+  margin-top: 56px;
+}
+
+
+/* WORKSHOP and SPECIAL HOMEPAGE THINGS
+--------------------------------------------------------- */
+
+#naming-workshop {
+   width: 60px;
+   height: 82px;
+   position: fixed;
+   left: 33%;
+   bottom: 8%;
+   z-index: 7;
+   border: 1px solid #000;
+   -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+   border-radius:         50%  50%  50%  50%  / 60%   60%   40%  40%;
+   background: #BEC6C9;
+   transition: .5s background ease-out;
+  -webkit-transition: .5s background ease-out;
+  -moz-transition: .5s background ease-out;
+  -o-transition: .5s background ease-out;
+}
+
+#naming-workshop:hover {
+  background: #fff;
+}
+
+#coding-from-life {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  top: 80px;
+  right: 25px;
+  z-index: 7;
+  border: 1px solid #000;
+  background: #BEC6C9;
+  transition: .5s background ease-out;
+  -webkit-transition: .5s background ease-out;
+  -moz-transition: .5s background ease-out;
+  -o-transition: .5s background ease-out;
+}
+
+#coding-from-life:before {
+  border-left: 1px solid black;
+  height: 80px;
+  left: 50%;
+  position:absolute;
+  content:'';
+}
+
+#coding-from-life:after {
+  border-top: 1px solid black;
+  width: 80px;
+  top: 50%;
+  position:absolute;
+  content:'';
+}
+
+#coding-from-life:hover {
+  background: #fff;
+}
+
+/* SHUFFLE
+--------------------------------------------------------- */
+
+a.shuffle,
+a.shuffle:hover {
+  background: none;
+}
+
+
+/* SECTIONS
+--------------------------------------------------------- */
+
+.sections-index {
+  position: fixed;
+  background: yellow;
+  top: 88px;
+  left: 20px;
+}
+
+.sections-index a,
+.sections-index a:hover {
+  display: block;
+  background: none;
+}
+
+.section {
+  margin-top: 4em;
+}
+
+.paper {
+  background: white;
+  padding: 60px;
+  margin: 1em -60px;
+}
+
+header.paper-header {
+  font-size: 1em;
+  margin-top: -85px;
+  margin-bottom: 85px;
+  font-style: italic;
+}
+
+
+/* BLOG
+--------------------------------------------------------- */
+
+.blog-date {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background: url('../images/no-symbol.gif') no-repeat;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: 28px;
+  margin-bottom: 28px;
+}
+
+.blog-post.text h1 {
+  font-weight: bold;
+}
+
+small {
+  font-size: 12px;
+  line-height: 1.4 !important;
+  display: block;
+}
+
+/* MEDIA QUERIES
+--------------------------------------------------------- */
+
+@media screen and (max-width: 880px) {
+
+  .projects-start-end { display: none; }
+
+}
+
+@media screen and (max-width: 810px) {
+
+  .document-side { display: none; }
+
+}
+
+@media screen and (max-width: 540px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  nav {
+    display: block;
+    height: auto;
+    padding: 12px 30px;
+  }
+
+  nav li {
+    display: block;
+    width: 100%;
+    padding: 4px 0;
+  }
+
+  nav li:hover {
+  }
+
+  nav li.current {
+    cursor: pointer;
+    color: red;
+  }
+
+  .Sunday li.current {
+    color: #ffde00;
+  }
+
+  nav .info-link{
+    position: static;
+    display: block;
+    margin: 8px auto;
+  }
+
+  .library-row .year {
+    display: none;
+  }
+
+  .large,
+  .text {
+    font-size: 19px;
+    line-height: 1.2;
+  }
+
+  #meta-bar .back-to-top {
+    text-align: center;
+    width: 100%;
+    padding: 17px 0;
+  }
+
+  #meta-bar .inside {
+    display: none;
+  }
+
+  ul.calendar .title, .document ul.calendar li.calendar-row {
+    text-indent: 0px;
+    text-indent: 0em;
+    padding-left: 0em;
+  }
+
+  #greeting.document {
+    font-size: 24px;
+    line-height: 1.2em;
+    overflow: auto;
+  }
+
+  #greeting p{
+    max-width: 100%;
+    float: none;
+    margin-right: 0px;
+  }
+
+}
